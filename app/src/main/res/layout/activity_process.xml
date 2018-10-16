@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fater.gg.ProcessActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <ImageView
+                android:id="@+id/bgimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.fater.gg.MyImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/ll">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="显著"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:onClick="modify1"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:onClick="deBalance"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="阈值"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="5dp"
+                    android:width="32dp"
+                    android:id="@+id/text"/>
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:onClick="inBalance"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="抠图"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:onClick="matting"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="添加背景"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:onClick="addbg"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:text="灰度"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:onClick="modify2"/>
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:text="怀旧"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:onClick="modify3"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="保存图片"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:onClick="savePic"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
